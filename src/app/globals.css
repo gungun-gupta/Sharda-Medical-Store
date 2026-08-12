@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  /* Default Color Palette: Serene Blues */
+  --brand-lightest: #e0f2fe; /* Soft tint of sky blue, replacement of #B3D7E0 for better light background readability */
+  --brand-accent-secondary: #7FB3C1;
+  --brand-accent: #4A9BBE;
+  --brand-primary: #2A7A9D;
+  --brand-dark: #1A4D6D;
+  
+  /* Neutral bases */
+  --background: #f8fafc; /* Crisp off-white */
+  --foreground: #0f172a; /* Slate 900 for high legibility */
+  
+  /* Brand accents */
+  --whatsapp: #25D366;
+  --whatsapp-dark: #128C7E;
+}
+
+/* 
+To swap to the Fresh Mint palette, comment out the Serene Blues block above and uncomment the block below:
+
+:root {
+  --brand-lightest: #f0fdf4;
+  --brand-accent-secondary: #A8D5BA;
+  --brand-accent: #6BBF9A;
+  --brand-primary: #4DAF7C;
+  --brand-dark: #2C7A5D;
+  
+  --background: #fcfdfc;
+  --foreground: #1c2e24;
+  
+  --whatsapp: #25D366;
+  --whatsapp-dark: #128C7E;
+}
+*/
+
+@theme {
+  --color-brand-lightest: var(--brand-lightest);
+  --color-brand-accent-secondary: var(--brand-accent-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-dark: var(--brand-dark);
+  
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-dark: var(--whatsapp-dark);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --animate-pulse-slow: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dynamic design helpers */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-dark {
+  background: rgba(26, 77, 109, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-accent-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-accent);
+}
