@@ -59,7 +59,7 @@ export const storeInfo: StoreInfo = {
     // Standard embed for Kawardha market area - using a generic functional map placeholder
     googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14828.679634991196!2d81.24278453775084!3d22.01428258661645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a296541f5a5ad27%3A0xb5b736b04eb8c74a!2sKawardha%2C%20Chhattisgarh%20491995!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
   },
-  phone: "+91 94255 64000",
+  phone: "+91 99936 50999",
   whatsapp: "918827510999", // Needs to be format without + or spaces for api.whatsapp.com/wa.me link
   hours: "8:30 AM – 11:00 PM",
   hoursFootnote: "Open 7 Days a week (Closed on alternate Fridays)",
