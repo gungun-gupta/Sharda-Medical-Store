@@ -12,7 +12,7 @@ export default function About() {
   const { openOrderModal } = useOrder();
 
   const milestones = [
-    { year: "2006", title: "Inception", desc: "Opened retail counter in Naveen Bazar, Kawardha, committed to quality." },
+    { year: "2000", title: "Inception", desc: "Opened retail counter in Naveen Bazar, Kawardha under the guidance of Dr. Yadvendra Gupta." },
     { year: "2012", title: "Wholesale Expansion", desc: "Began bulk pharmaceutical supply services to local rural clinics." },
     { year: "2018", title: "Digital Integration", desc: "Implemented full computerized billing and real-time inventory tracking." },
     { year: "2020", title: "Doorstep Delivery", desc: "First in Kawardha to launch daily doorstep delivery for chronic care patients." }
@@ -31,7 +31,7 @@ export default function About() {
     },
     {
       title: "Wholesale Network",
-      desc: "Serving as a master stockist, supplying over 1000+ registered medical practitioners and clinics in Kabirdham district.",
+      desc: "Serving as a master stockist, supplying over 400+ registered medical practitioners and clinics in Kabirdham district.",
       icon: <Building2 className="w-6 h-6 text-brand-primary" />
     }
   ];
@@ -45,7 +45,7 @@ export default function About() {
           Our Legacy
         </span>
         <h1 className="text-4xl md:text-5xl font-black text-brand-dark tracking-tight">
-          Caring for Kawardha for <span className="text-gradient">20+ Years.</span>
+          Caring for Kawardha for <span className="text-gradient">26+ Years.</span>
         </h1>
         <p className="text-slate-600 max-w-2xl mx-auto text-base leading-relaxed">
           From a humble retail shop to the district&apos;s leading distributor, Sharda Medical Store has been a cornerstone of health in Kabirdham, Chhattisgarh.
@@ -62,10 +62,10 @@ export default function About() {
               Established in {storeInfo.establishedYear} in the bustling commercial hub of Naveen Bazar, Kawardha, Sharda Medical Store was founded with a singular vision: to make genuine, life-saving medicines accessible and affordable to every family in the region.
             </p>
             <p className="text-slate-600 leading-relaxed text-sm">
-              Over the last two decades, under the guidance of qualified healthcare specialists, we have grown into one of the top medical stores in the district. Recognizing the need for convenient access, we pioneered medicine home-delivery services, ensuring seniors and critical patients never have to worry about running out of their prescriptions.
+              Over the last two and a half decades, under the guidance of qualified healthcare specialists, we have grown into one of the top medical stores in the district. Recognizing the need for convenient access, we pioneered medicine home-delivery services, ensuring seniors and critical patients never have to worry about running out of their prescriptions.
             </p>
             <p className="text-slate-600 leading-relaxed text-sm font-semibold text-brand-primary">
-              Today, we are honored to have the confidence of over 1000+ local doctors who count on us for wholesale supplies, as well as thousands of families who trust us for their daily health essentials.
+              Today, we are honored to have the confidence of over 400+ local doctors who count on us for wholesale supplies, as well as thousands of families who trust us for their daily health essentials.
             </p>
           </div>
 
@@ -116,7 +116,90 @@ export default function About() {
         </div>
       </section>
 
-      {/* 3. CORE VALUE HIGHLIGHTS */}
+      {/* 3. OWNERSHIP & LEADERSHIP SECTION */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="text-center space-y-4 max-w-2xl mx-auto">
+          <span className="text-xs font-bold text-brand-primary uppercase tracking-widest px-3 py-1 bg-brand-lightest rounded-full">
+            Our Pillars
+          </span>
+          <h2 className="text-3xl font-extrabold text-slate-800 tracking-tight">
+            Leadership & Management Authority
+          </h2>
+          <p className="text-slate-600 text-sm">
+            Meet the founders, owners, and key figures who have dedicated their lives and expertise to making Sharda Medical Store Kawardha&apos;s most trusted pharmacy.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          {/* Dr. Yadvendra Gupta */}
+          <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-xs space-y-4 flex flex-col justify-between hover:shadow-md transition-all">
+            <div className="space-y-3">
+              <span className="text-xs font-bold text-brand-primary bg-brand-lightest/60 px-2 py-0.5 rounded-md">
+                1. Guidance & Care
+              </span>
+              <h3 className="font-extrabold text-slate-800 text-lg">Dr. Yadvendra Gupta</h3>
+              <p className="text-slate-500 text-xs leading-relaxed">
+                Serving since 2000. The medical store has flourished and maintained high standards of pharmaceutical care under his constant guidance and healthcare supervision.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-slate-50 text-[10px] text-slate-400 font-semibold">
+              Serving since 2000
+            </div>
+          </div>
+
+          {/* Late Mr. Anupam Gupta */}
+          <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-xs space-y-4 flex flex-col justify-between hover:shadow-md transition-all border-l-4 border-l-brand-accent-secondary">
+            <div className="space-y-3">
+              <span className="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md">
+                2. In Loving Memory
+              </span>
+              <h3 className="font-extrabold text-slate-800 text-lg">Late Mr. Anupam Gupta</h3>
+              <p className="text-slate-500 text-xs leading-relaxed">
+                Dedicated 22 years of his precious life with absolute integrity and care to the pharmacy counter. His legacy of selfless service continues to guide our mission.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-slate-50 text-[10px] text-slate-400 font-semibold">
+              22 Years of Precious Service
+            </div>
+          </div>
+
+          {/* Mr. Ashutosh Gupta */}
+          <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-xs space-y-4 flex flex-col justify-between hover:shadow-md transition-all border-l-4 border-l-brand-primary">
+            <div className="space-y-3">
+              <span className="text-xs font-bold text-teal-600 bg-teal-50 px-2 py-0.5 rounded-md">
+                3. Owner & Authority
+              </span>
+              <h3 className="font-extrabold text-slate-800 text-lg">Mr. Ashutosh Gupta</h3>
+              <p className="text-slate-500 text-xs leading-relaxed">
+                Serving since 2000. With 26+ years of service in this field, he currently holds the authority, handles direct customer counter queries, and oversees all business operations.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-slate-50 text-[10px] text-slate-400 font-semibold">
+              26+ Years of Field Experience
+            </div>
+          </div>
+
+          {/* Mr. Awadesh Gupta */}
+          <div className="bg-white border border-slate-100 p-6 rounded-2xl shadow-xs space-y-4 flex flex-col justify-between hover:shadow-md transition-all">
+            <div className="space-y-3">
+              <span className="text-xs font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">
+                4. Helping Pillar
+              </span>
+              <h3 className="font-extrabold text-slate-800 text-lg">Mr. Awadesh Gupta</h3>
+              <p className="text-slate-500 text-xs leading-relaxed">
+                Key supporting pillar of Sharda Medical Store. He dedicates his support, effort, and care to coordinate daily operations, customer logistics, and inventory management.
+              </p>
+            </div>
+            <div className="pt-3 border-t border-slate-50 text-[10px] text-slate-400 font-semibold">
+              Core Operations Support
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 4. CORE VALUE HIGHLIGHTS */}
       <section className="bg-slate-50 py-20 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -140,7 +223,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 4. HISTORICAL MILESTONES */}
+      {/* 5. HISTORICAL MILESTONES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-slate-800">Our Milestones</h2>
@@ -162,7 +245,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 5. QUICK WHOLESALE/ORDER BANNER */}
+      {/* 6. QUICK WHOLESALE/ORDER BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-r from-brand-dark to-brand-primary p-8 md:p-12 rounded-3xl text-white shadow-xl text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-3">

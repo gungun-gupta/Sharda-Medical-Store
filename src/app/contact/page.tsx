@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { storeInfo } from '@/data/storeContent';
 import { 
   MapPin, Phone, MessageSquare, Clock, Calendar, 
@@ -14,6 +14,11 @@ export default function Contact() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -53,7 +58,7 @@ export default function Contact() {
           Contact Sharda Medical Store
         </h1>
         <p className="text-slate-600 text-sm">
-          Have an order, inquiry about medicine sourcing, or clinical wholesale account? Reach out using the channels below.
+          Have an order, inquiry about medicine sourcing, or clinical wholesale account? Reach out using the channels below. All store operations and contact lines are managed under the authority of <strong>Mr. Ashutosh Gupta</strong>.
         </p>
       </div>
 
@@ -106,17 +111,17 @@ export default function Contact() {
             </div>
 
             {/* Direct Phone */}
-            <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2">
+            <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2 border-l-4 border-l-brand-primary">
               <Phone className="w-5 h-5 text-brand-primary" />
               <h3 className="font-extrabold text-slate-800 text-sm">Phone Counter</h3>
               <p className="text-slate-500 text-xs leading-relaxed mb-2">
-                Speak directly with a pharmacist on duty to confirm orders.
+                Speak directly with <strong>Mr. Ashutosh Gupta</strong> (Managing Authority) on his direct line to confirm orders.
               </p>
               <a 
                 href={`tel:${storeInfo.phone.replace(/\s+/g, '')}`}
                 className="text-xs font-bold text-brand-primary hover:underline"
               >
-                Call Counter Line &rarr;
+                Call Mr. Ashutosh Gupta &rarr;
               </a>
             </div>
 
@@ -198,14 +203,20 @@ export default function Contact() {
 
         {/* Right Column: Google Maps */}
         <div className="lg:col-span-6 bg-slate-100 rounded-3xl overflow-hidden min-h-[400px] border border-slate-100 shadow-xs relative">
-          <iframe
-            src={storeInfo.location.googleMapsEmbedUrl}
-            className="w-full h-full border-none min-h-[450px]"
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Sharda Medical Store Google Maps Location"
-          />
+          {isMounted ? (
+            <iframe
+              src={storeInfo.location.googleMapsEmbedUrl}
+              className="w-full h-full border-none min-h-[450px]"
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Sharda Medical Store Google Maps Location"
+            />
+          ) : (
+            <div className="w-full h-full min-h-[450px] bg-slate-50 flex items-center justify-center">
+              <span className="text-slate-400 text-xs">Loading store map...</span>
+            </div>
+          )}
         </div>
 
       </div>

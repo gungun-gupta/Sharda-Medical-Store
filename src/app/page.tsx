@@ -36,7 +36,7 @@ export default function Home() {
 
   const usps = [
     { title: "Kawardha's 1st Delivery", desc: "Pioneered doorstep medicine delivery across Kawardha.", icon: <Truck className="w-6 h-6 text-brand-primary" /> },
-    { title: "20+ Years Legacy", desc: "Serving Kabirdham district since 2006 with absolute integrity.", icon: <Award className="w-6 h-6 text-brand-primary" /> },
+    { title: "26+ Years Legacy", desc: "Serving Kabirdham district since 2000 with absolute integrity.", icon: <Award className="w-6 h-6 text-brand-primary" /> },
     { title: "Computerized Billing", desc: "Transparent invoices with clear itemized discounts.", icon: <FileText className="w-6 h-6 text-brand-primary" /> },
     { title: "Proper Cold Storage", desc: "Strict temperature-controlled storage for vaccines & insulin.", icon: <ShieldCheck className="w-6 h-6 text-brand-primary" /> },
     { title: "Trained Pharmacists", desc: "Qualified drug counseling and dosage explanation.", icon: <Users className="w-6 h-6 text-brand-primary" /> },
@@ -68,7 +68,7 @@ export default function Home() {
               </h1>
               
               <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Operating for <strong>20+ years</strong> in Naveen Bazar. Stocking all major healthcare brands, offering <strong>10% discount</strong> for regulars, and trusted by over <strong>1000+ doctors</strong> for wholesale supply.
+                Operating for <strong>26+ years</strong> in Naveen Bazar. Stocking all major healthcare brands, offering <strong>10% discount</strong> for regulars, and trusted by over <strong>400+ doctors</strong> for wholesale supply.
               </p>
 
               {/* CTAs */}
@@ -92,11 +92,11 @@ export default function Home() {
               {/* Core promises row */}
               <div className="pt-6 grid grid-cols-3 gap-4 border-t border-slate-100 max-w-md mx-auto lg:mx-0">
                 <div>
-                  <span className="block text-2xl font-black text-brand-primary">20+</span>
+                  <span className="block text-2xl font-black text-brand-primary">26+</span>
                   <span className="text-[10px] md:text-xs font-semibold text-slate-500 uppercase tracking-wider">Years Trust</span>
                 </div>
                 <div>
-                  <span className="block text-2xl font-black text-brand-primary">1000+</span>
+                  <span className="block text-2xl font-black text-brand-primary">400+</span>
                   <span className="text-[10px] md:text-xs font-semibold text-slate-500 uppercase tracking-wider">Doctors Trust</span>
                 </div>
                 <div>
@@ -159,11 +159,11 @@ export default function Home() {
         <div className="p-8 bg-slate-900 rounded-3xl text-white shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 divide-y md:divide-y-0 lg:divide-x divide-slate-800 text-center lg:text-left">
             <div className="pt-4 md:pt-0 lg:px-6 space-y-1">
-              <span className="block text-3xl font-black text-brand-accent-secondary">20+ Years</span>
+              <span className="block text-3xl font-black text-brand-accent-secondary">26+ Years</span>
               <span className="text-xs text-slate-400 font-medium">Serving Kawardha & Kabirdham District</span>
             </div>
             <div className="pt-4 md:pt-0 lg:px-6 space-y-1">
-              <span className="block text-3xl font-black text-brand-accent-secondary">1000+</span>
+              <span className="block text-3xl font-black text-brand-accent-secondary">400+</span>
               <span className="text-xs text-slate-400 font-medium">Doctors & Clinics Trust Our Wholesale Supply</span>
             </div>
             <div className="pt-4 md:pt-0 lg:px-6 space-y-1">
@@ -233,7 +233,7 @@ export default function Home() {
               <div className="space-y-3 pt-2">
                 <div className="flex items-center space-x-3 text-slate-700 font-semibold">
                   <CheckCircle2 className="w-5 h-5 text-brand-primary" />
-                  <span>Open 13 Hours Daily (8:30 AM – 11:00 PM)</span>
+                  <span>Open 15 Hours Daily (8:00 AM – 11:00 PM)</span>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-700 font-semibold">
                   <CheckCircle2 className="w-5 h-5 text-brand-primary" />

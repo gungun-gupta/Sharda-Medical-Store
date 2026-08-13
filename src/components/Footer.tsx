@@ -28,7 +28,7 @@ export default function Footer() {
             </p>
             <div className="pt-2">
               <span className="inline-block px-3 py-1 bg-brand-dark/50 border border-brand-primary/30 text-brand-lightest text-xs font-semibold rounded-full">
-                🏅 20+ Years of Medical Trust
+                🏅 26+ Years of Medical Trust
               </span>
             </div>
           </div>
@@ -43,7 +43,7 @@ export default function Footer() {
                 <Clock className="w-4.5 h-4.5 text-brand-accent mt-0.5 shrink-0" />
                 <div>
                   <span className="block font-semibold text-slate-200">Daily Timing</span>
-                  <span className="text-xs text-slate-400">8:30 AM – 11:00 PM</span>
+                  <span className="text-xs text-slate-400">8:00 AM – 11:00 PM</span>
                 </div>
               </li>
               <li className="flex items-start space-x-2.5">

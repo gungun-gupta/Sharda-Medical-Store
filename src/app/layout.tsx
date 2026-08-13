@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     default: "Sharda Medical Store | Medicine Home Delivery Kawardha",
     template: "%s | Sharda Medical Store Kawardha",
   },
-  description: "Sharda Medical Store in Naveen Bazar, Kawardha is a trusted pharmacy offering doorstep medicine home delivery. Operating for 20+ years, stocking major brands, and trusted by 1000+ doctors for wholesale supply.",
+  description: "Sharda Medical Store in Naveen Bazar, Kawardha is a trusted pharmacy offering doorstep medicine home delivery. Operating for 26+ years, stocking major brands, and trusted by 400+ doctors for wholesale supply.",
   keywords: [
     "medicine home delivery Kawardha",
     "pharmacy Naveen Bazar",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Sharda Medical Store | Medicine Home Delivery Kawardha",
-    description: "Kawardha's trusted doorstep pharmacy & wholesale medicine distributor. Operating for 20+ years, serving 1000+ doctors.",
+    description: "Kawardha's trusted doorstep pharmacy & wholesale medicine distributor. Operating for 26+ years, serving 400+ doctors.",
     type: "website",
     locale: "en_IN",
   },
@@ -49,7 +49,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Pharmacy",
     "name": storeInfo.name,
-    "description": "Kawardha's leading pharmacy in Naveen Bazar. Medicine home delivery and wholesale distributor trusted by 1000+ doctors.",
+    "description": "Kawardha's leading pharmacy in Naveen Bazar. Medicine home delivery and wholesale distributor trusted by 400+ doctors.",
     "telephone": storeInfo.phone,
     "url": "https://shardamedicalstore.com", // Fallback URL
     "logo": "https://shardamedicalstore.com/logo.png",
@@ -78,13 +78,13 @@ export default function RootLayout({
           "Saturday",
           "Sunday"
         ],
-        "opens": "08:30",
+        "opens": "08:00",
         "closes": "23:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Friday",
-        "opens": "08:30",
+        "opens": "08:00",
         "closes": "23:00",
         "description": storeInfo.hoursFootnote
       }

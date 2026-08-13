@@ -15,9 +15,9 @@ export default function ReturnPolicy() {
       </p>
 
       <section className="space-y-3">
-        <h2 className="text-lg font-bold text-slate-800">1. Return Window</h2>
+        <h2 className="text-lg font-bold text-slate-800">1. Return Window & Confirmation</h2>
         <p className="text-sm leading-relaxed">
-          Medicines and general healthcare products can be returned within <strong>7 days</strong> of the purchase date, as shown on your computerized invoice.
+          Medicines and general healthcare products are accepted for returns strictly on a <strong>condition basis</strong>. You can ask and confirm eligibility at the time of buying, or visit the store later within <strong>7 days</strong> of purchase to receive confirmation.
         </p>
       </section>
 

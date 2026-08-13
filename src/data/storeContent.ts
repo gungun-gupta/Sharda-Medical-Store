@@ -55,17 +55,17 @@ export const storeInfo: StoreInfo = {
     district: "Kabirdham",
     state: "Chhattisgarh",
     landmark: "Naveen Bazar Main Market",
-    googleMapsLink: "https://maps.google.com/?q=Naveen+Bazar,+Kawardha,+Chhattisgarh",
+    googleMapsLink: "https://maps.app.goo.gl/vWFHc8c7jLbuCVeJ9",
     // Standard embed for Kawardha market area - using a generic functional map placeholder
     googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14828.679634991196!2d81.24278453775084!3d22.01428258661645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a296541f5a5ad27%3A0xb5b736b04eb8c74a!2sKawardha%2C%20Chhattisgarh%20491995!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
   },
   phone: "+91 99936 50999",
   whatsapp: "918827510999", // Needs to be format without + or spaces for api.whatsapp.com/wa.me link
-  hours: "8:30 AM – 11:00 PM",
-  hoursFootnote: "Open 7 Days a week (Closed on alternate Fridays)",
-  establishedYear: "2006",
-  yearsOfService: 20, // 20+ years of operation
-  doctorCount: "1000+",
+  hours: "8:00 AM – 11:00 PM",
+  hoursFootnote: "Open 15 Hours Daily, 7 Days a week (Closed on alternate Fridays)",
+  establishedYear: "2000",
+  yearsOfService: 26, // 26+ years of operation
+  doctorCount: "400+",
   discountRate: "10%"
 };
 
@@ -90,7 +90,7 @@ export const services = [
     id: "wholesale",
     title: "Wholesale for Doctors",
     shortDesc: "Wholesale distribution rates on bulk orders for clinics & hospitals.",
-    longDesc: "We supply essential medicines and equipment at highly competitive wholesale rates to over 1000+ doctors, clinics, and hospitals throughout Kabirdham district. Partner with us for smooth bulk logistics and digital invoicing.",
+    longDesc: "We supply essential medicines and equipment at highly competitive wholesale rates to over 400+ doctors, clinics, and hospitals throughout Kabirdham district. Partner with us for smooth bulk logistics and digital invoicing.",
     iconName: "Building2",
     ctaText: "Wholesale Inquiry"
   },
@@ -245,7 +245,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "Is there a minimum order amount for home delivery?",
-    answer: "No, we do not have a strict minimum order amount, but we offer free delivery in Kawardha town limits for orders above ₹300. For very small orders, a nominal delivery charge may apply depending on your location."
+    answer: "Yes, the minimum order amount for home delivery is ₹500/- and above. Free delivery is provided within Kawardha town limits for orders meeting this minimum threshold."
   },
   {
     question: "Can you source a rare or specialized medicine if it is out of stock?",
@@ -253,11 +253,11 @@ export const faqs: FAQ[] = [
   },
   {
     question: "Do you supply medicines in wholesale to clinics and doctors?",
-    answer: "Yes, we are one of the leading wholesale pharmaceutical distributors in Kawardha district, trusted by over 1000+ doctors. We offer bulk medicines, bandages, surgical items, and diagnostics at dedicated wholesale rates. Doctors and clinic administrators can reach out via call or WhatsApp for a customized quote."
+    answer: "Yes, we are one of the leading wholesale pharmaceutical distributors in Kawardha district, trusted by over 400+ doctors. We offer bulk medicines, bandages, surgical items, and diagnostics at dedicated wholesale rates. Doctors and clinic administrators can reach out via call or WhatsApp for a customized quote."
   },
   {
     question: "What are your operating hours? Are you open on weekends?",
-    answer: "We are open 13 hours daily, from 8:30 AM to 11:00 PM, 7 days a week (Monday to Sunday) to ensure you always have access to healthcare. Please note that we are closed on alternate Fridays."
+    answer: "We are open 15 hours daily, from 8:00 AM to 11:00 PM, 7 days a week (Monday to Sunday) to ensure you always have access to healthcare. Please note that we are closed on alternate Fridays."
   },
   {
     question: "Do you offer discounts for regular customers?",
@@ -265,7 +265,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "Can I return unused medicines?",
-    answer: "Yes. Unopened strips of medicines in their original packaging, with intact batch numbers and expiry dates, can be returned within 7 days of purchase. Please note that refrigerated medicines, opened strips, and loose items cannot be returned due to quality safety standards."
+    answer: "Returns are accepted on a condition basis. You can ask at the time of buying or later come within 7 days to get the confirmation. Unopened strips of medicines in their original packaging, with intact batch numbers and expiry dates, can be returned upon validation."
   }
 ];
 

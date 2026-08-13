@@ -19,7 +19,7 @@ export default function Services() {
       icon: <Truck className="w-10 h-10 text-brand-primary" />,
       desc: "We bring genuine medicines directly to your home, saving you a trip to Naveen Bazar. Our dispatch system ensures secure packaging and timely delivery, especially helpful for chronic care patients (diabetes, blood pressure, thyroid).",
       features: [
-        "Free delivery in Kawardha for orders above ₹300",
+        "Minimum order value of ₹500/- and above for home delivery",
         "Secure temperature-insulated packaging for sensitive drugs",
         "Order verification by a registered pharmacist before dispatch",
         "Delivery within 2 to 4 hours in local Kawardha limits"
@@ -59,7 +59,7 @@ export default function Services() {
       title: "Wholesale for Doctors & Clinics",
       subtitle: "Discounted bulk prices for medical practitioners, clinics, and hospitals.",
       icon: <Building2 className="w-10 h-10 text-brand-primary" />,
-      desc: "As one of Kawardha's largest wholesale drug distributors, we supply clinical consumables, surgical items, IV fluids, and general formulations to over 1000+ doctors across Kabirdham district. Partner with us for reliable bulk logistics.",
+      desc: "As one of Kawardha's largest wholesale drug distributors, we supply clinical consumables, surgical items, IV fluids, and general formulations to over 400+ doctors across Kabirdham district. Partner with us for reliable bulk logistics.",
       features: [
         "Specialized wholesale rates on bulk pharmaceutical purchases",
         "Wide inventory matching clinical and hospital standards",
