@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { products, Product } from '@/data/storeContent';
+import { products } from '@/data/storeContent';
 import { useOrder } from '@/context/OrderContext';
-import { Search, Plus, ShieldCheck, Stethoscope, MessageSquare, ArrowRight } from 'lucide-react';
+import SocialShare from '@/components/SocialShare';
+import { Search, Plus, ShieldCheck, Stethoscope, MessageSquare } from 'lucide-react';
 
 function ShopCatalog() {
   const { openOrderModal } = useOrder();
@@ -35,19 +36,19 @@ function ShopCatalog() {
       case 'medicines':
         return (
           <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-sky-50 text-brand-primary">
-            <Plus className="w-6 h-6 stroke-[3]" />
+            <Plus className="w-6 h-6 stroke-[3]" aria-hidden="true" />
           </div>
         );
       case 'healthcare':
         return (
           <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-teal-50 text-teal-600">
-            <ShieldCheck className="w-6 h-6" />
+            <ShieldCheck className="w-6 h-6" aria-hidden="true" />
           </div>
         );
       case 'equipment':
         return (
           <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-violet-50 text-violet-600">
-            <Stethoscope className="w-6 h-6" />
+            <Stethoscope className="w-6 h-6" aria-hidden="true" />
           </div>
         );
       default:
@@ -66,12 +67,15 @@ function ShopCatalog() {
     <div className="py-16 space-y-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       {/* Page Header */}
-      <div className="text-center space-y-4 max-w-2xl mx-auto">
-        <h1 className="text-4xl font-black text-brand-dark tracking-tight">
-          Browse Our <span className="text-gradient">Medical Catalog</span>
+      <div className="text-center space-y-4 max-w-3xl mx-auto">
+        <span className="text-xs font-bold text-brand-primary uppercase tracking-widest px-3 py-1 bg-brand-lightest rounded-full">
+          Sharda Medical Store Catalog
+        </span>
+        <h1 className="text-3xl sm:text-4xl font-black text-brand-dark tracking-tight">
+          Medical Catalog &amp; <span className="text-gradient">Pharmacy Products in Kawardha</span>
         </h1>
         <p className="text-slate-600 text-sm leading-relaxed">
-          Order prescription drugs, daily wellness items, and clinic equipment. Click **Order Now** to instantly format a list and send it to our WhatsApp team for home delivery.
+          Order genuine prescription medicines, daily healthcare essentials, and clinic supplies from <strong>Sharda Medical Store in Kawardha</strong>. Enjoy a <strong>10% discount</strong> on regular orders and fast <strong>medicine home delivery in Kawardha</strong>.
         </p>
       </div>
 
@@ -80,12 +84,13 @@ function ShopCatalog() {
         
         {/* Search */}
         <div className="relative w-full md:w-80">
-          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400" />
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4.5 h-4.5 text-slate-400" aria-hidden="true" />
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search medicines or devices..."
+            placeholder="Search medicines or devices in Kawardha..."
+            aria-label="Search medicines and products"
             className="w-full pl-10 pr-4 py-2.5 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none bg-slate-50/30 placeholder-slate-400"
           />
         </div>
@@ -147,10 +152,11 @@ function ShopCatalog() {
                 </div>
                 <button
                   onClick={() => openOrderModal(product.name)}
+                  aria-label={`Order ${product.name} on WhatsApp from Sharda Medical Store Kawardha`}
                   className="flex items-center space-x-1.5 px-4 py-2.5 bg-brand-lightest hover:bg-brand-primary text-brand-dark hover:text-white font-bold rounded-xl transition-all cursor-pointer text-xs"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 fill-current" />
-                  <span>Order Now</span>
+                  <MessageSquare className="w-3.5 h-3.5 fill-current" aria-hidden="true" />
+                  <span>Order on WhatsApp</span>
                 </button>
               </div>
 
@@ -161,25 +167,34 @@ function ShopCatalog() {
         /* Empty State Sourcing Card */
         <div className="max-w-xl mx-auto p-8 bg-white border border-slate-100 rounded-3xl shadow-sm text-center space-y-6">
           <div className="mx-auto flex items-center justify-center w-16 h-16 rounded-full bg-brand-lightest text-brand-primary">
-            <Search className="w-8 h-8" />
+            <Search className="w-8 h-8" aria-hidden="true" />
           </div>
           <div className="space-y-2">
-            <h3 className="text-lg font-bold text-slate-800">Can&apos;t find what you are looking for?</h3>
+            <h3 className="text-lg font-bold text-slate-800">Can&apos;t find what you are looking for in Kawardha?</h3>
             <p className="text-slate-500 text-xs leading-relaxed max-w-sm mx-auto">
-              We can source almost any rare or specialty medicine within 24 to 48 hours. Send us a message on WhatsApp with the details and we will secure it for you.
+              <strong>Sharda Medical Store in Kawardha</strong> can source almost any rare or specialty medicine within 24 to 48 hours without extra sourcing fees.
             </p>
           </div>
           <div>
             <button
               onClick={() => openOrderModal(searchTerm ? `Sourcing medicine request: ${searchTerm}` : undefined)}
+              aria-label="Inquire special medicine sourcing on WhatsApp"
               className="inline-flex items-center space-x-2 px-6 py-3 bg-brand-primary hover:bg-brand-dark text-white font-bold rounded-xl shadow-md transition-all cursor-pointer text-xs"
             >
-              <MessageSquare className="w-4 h-4 fill-white" />
+              <MessageSquare className="w-4 h-4 fill-white" aria-hidden="true" />
               <span>Inquire Special Sourcing</span>
             </button>
           </div>
         </div>
       )}
+
+      {/* Social Share */}
+      <div className="flex justify-center pt-8 border-t border-slate-100">
+        <SocialShare 
+          title="Medical Catalog — Sharda Medical Store in Kawardha"
+          label="Share this catalog:"
+        />
+      </div>
 
     </div>
   );

@@ -14,25 +14,36 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sharda Medical Store | Medicine Home Delivery Kawardha",
+    default: "Sharda Medical Store | Trusted Medical Store in Kawardha",
     template: "%s | Sharda Medical Store Kawardha",
   },
-  description: "Sharda Medical Store in Naveen Bazar, Kawardha is a trusted pharmacy offering doorstep medicine home delivery. Operating for 26+ years, stocking major brands, and trusted by 400+ doctors for wholesale supply.",
+  description: "Sharda Medical Store in Kawardha offers 26+ years of trusted pharmacy care, doorstep medicine home delivery, major brands, and wholesale supply for 400+ doctors.",
   keywords: [
+    "Sharda Medical Store in Kawardha",
+    "medical store Kawardha",
+    "medical shop Kawardha",
+    "pharmacy Kawardha",
     "medicine home delivery Kawardha",
-    "pharmacy Naveen Bazar",
-    "medical store Kawardha district",
     "wholesale medicine supplier Kawardha",
-    "Sharda Medical Store Kawardha",
     "chemist Naveen Bazar Kawardha",
-    "buy medicine online Kawardha",
     "surgical equipment Kawardha",
+    "buy medicine Kawardha",
   ],
+  icons: {
+    icon: "/icon",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
-    title: "Sharda Medical Store | Medicine Home Delivery Kawardha",
-    description: "Kawardha's trusted doorstep pharmacy & wholesale medicine distributor. Operating for 26+ years, serving 400+ doctors.",
+    title: "Sharda Medical Store | Trusted Medical Store in Kawardha",
+    description: "Sharda Medical Store in Kawardha offers 26+ years of trusted pharmacy care, doorstep medicine home delivery, major brands, and wholesale supply for 400+ doctors.",
     type: "website",
     locale: "en_IN",
+    siteName: "Sharda Medical Store",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sharda Medical Store | Trusted Medical Store in Kawardha",
+    description: "Sharda Medical Store in Kawardha offers 26+ years of trusted pharmacy care, doorstep medicine home delivery, major brands, and wholesale supply for 400+ doctors.",
   },
   alternates: {
     canonical: "/",
@@ -48,12 +59,31 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Pharmacy",
-    "name": storeInfo.name,
-    "description": "Kawardha's leading pharmacy in Naveen Bazar. Medicine home delivery and wholesale distributor trusted by 400+ doctors.",
+    "name": "Sharda Medical Store",
+    "alternateName": [
+      "Sharda Medical Store in Kawardha",
+      "Sharda Medical Store Kawardha",
+      "Sharda Medicals"
+    ],
+    "description": "Sharda Medical Store in Kawardha offers 26+ years of trusted pharmacy care, doorstep medicine home delivery, major brands, and wholesale pharmaceutical supply in Naveen Bazar.",
     "telephone": storeInfo.phone,
-    "url": "https://shardamedicalstore.com", // Fallback URL
-    "logo": "https://shardamedicalstore.com/logo.png",
+    "url": "https://shardamedicalstore.com",
+    "logo": "https://shardamedicalstore.com/apple-touch-icon.png",
+    "image": "https://shardamedicalstore.com/apple-touch-icon.png",
     "priceRange": "₹₹",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, UPI, Credit Card, Debit Card",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Kawardha"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Kabirdham"
+      }
+    ],
+    "hasMap": storeInfo.location.googleMapsLink,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": storeInfo.location.address,
@@ -94,6 +124,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} font-sans scroll-smooth`}>
       <head>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

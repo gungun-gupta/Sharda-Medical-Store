@@ -3,6 +3,7 @@
 import React from 'react';
 import { useOrder } from '@/context/OrderContext';
 import { storeInfo } from '@/data/storeContent';
+import SocialShare from '@/components/SocialShare';
 import { 
   Truck, Search, Building2, Stethoscope, CheckCircle2, 
   ArrowRight, Phone, MessageSquare 
@@ -14,86 +15,86 @@ export default function Services() {
   const serviceDetails = [
     {
       id: "delivery",
-      title: "Doorstep Home Delivery",
-      subtitle: "First pharmacy in Kawardha district to offer medicine home delivery.",
-      icon: <Truck className="w-10 h-10 text-brand-primary" />,
-      desc: "We bring genuine medicines directly to your home, saving you a trip to Naveen Bazar. Our dispatch system ensures secure packaging and timely delivery, especially helpful for chronic care patients (diabetes, blood pressure, thyroid).",
+      title: "Doorstep Medicine Home Delivery in Kawardha",
+      subtitle: "First pharmacy in Kawardha district to offer organized medicine home delivery.",
+      icon: <Truck className="w-10 h-10 text-brand-primary" aria-hidden="true" />,
+      desc: "We bring genuine medicines directly to your doorstep in Kawardha, saving you a trip to Naveen Bazar. Our dispatch system ensures secure packaging and timely delivery, especially helpful for chronic care patients managing diabetes, hypertension, and thyroid conditions.",
       features: [
-        "Minimum order value of ₹500/- and above for home delivery",
-        "Secure temperature-insulated packaging for sensitive drugs",
-        "Order verification by a registered pharmacist before dispatch",
-        "Delivery within 2 to 4 hours in local Kawardha limits"
+        "Minimum order value of ₹500/- for doorstep home delivery in Kawardha",
+        "Secure temperature-insulated packaging for sensitive drugs & insulin",
+        "Prescription verification by a registered pharmacist before dispatch",
+        "Prompt delivery within 2 to 4 hours in local Kawardha limits"
       ],
       howItWorks: [
-        "Send your list or a clear photo of your prescription on WhatsApp.",
-        "Our pharmacist calls you to confirm the items, substitutes, and billing.",
-        "We pack the order following sanitization protocols.",
+        "Send your medicine list or a clear photo of your prescription on WhatsApp.",
+        "Our pharmacist calls you to confirm items, dosage instructions, and billing.",
+        "We pack the order following strict hygiene and cold-chain protocols.",
         "Our delivery agent drops the package at your door; pay via Cash or UPI."
       ],
-      whatsappPrefill: "I'd like to place an order for Medicine Home Delivery. Here is my list/prescription:",
-      ctaText: "Order Home Delivery Now"
+      whatsappPrefill: "I'd like to place an order for Medicine Home Delivery in Kawardha. Here is my list/prescription:",
+      ctaText: "Order Medicine Home Delivery"
     },
     {
       id: "sourcing",
-      title: "Special Medicine Sourcing",
-      subtitle: "If you cannot find a medicine anywhere in the district, we will source it.",
-      icon: <Search className="w-10 h-10 text-brand-primary" />,
-      desc: "Rare therapies, oncology injections, psychiatric drugs, and pediatric medicines are often difficult to find locally. We leverage our regional wholesale connections in Raipur, Bilaspur, and national networks to procure the drug you need.",
+      title: "Special & Rare Medicine Sourcing",
+      subtitle: "If you cannot find a medicine anywhere in Kabirdham district, we will source it.",
+      icon: <Search className="w-10 h-10 text-brand-primary" aria-hidden="true" />,
+      desc: "Rare therapies, oncology injections, psychiatric medications, and specialized pediatric drugs are often difficult to find locally. We leverage our regional wholesale connections across Raipur, Bilaspur, and state distributors to procure the exact medicine you require.",
       features: [
-        "Procurement of hard-to-find prescription medicines",
-        "Sourced safely through certified direct channels in 24-48 hours",
-        "No extra sourcing fee — pay only standard retail price",
-        "Live status updates on WhatsApp"
+        "Procurement of hard-to-find prescription medicines in Kawardha",
+        "Sourced safely through certified direct distributors in 24-48 hours",
+        "Zero extra sourcing fees — pay only standard printed MRP / retail price",
+        "Live status updates provided directly on WhatsApp"
       ],
       howItWorks: [
-        "Share the correct chemical composition or brand name of the drug.",
-        "Attach a photo of the medicine box or prescription.",
-        "We query regional depots and notify you of estimated arrival and price.",
-        "Collect from Naveen Bazar store or have it delivered to your home."
+        "Share the chemical composition or brand name of the drug.",
+        "Attach a photo of the medicine box or doctor's prescription.",
+        "We query regional depots and notify you of estimated arrival and cost.",
+        "Collect from our Naveen Bazar store or have it delivered to your home."
       ],
-      whatsappPrefill: "I'd like to inquire about sourcing a special medicine that is not available elsewhere. Details:",
-      ctaText: "Inquire Rare Medicine"
+      whatsappPrefill: "I'd like to inquire about sourcing a special medicine in Kawardha. Details:",
+      ctaText: "Inquire Rare Medicine Sourcing"
     },
     {
       id: "wholesale",
-      title: "Wholesale for Doctors & Clinics",
-      subtitle: "Discounted bulk prices for medical practitioners, clinics, and hospitals.",
-      icon: <Building2 className="w-10 h-10 text-brand-primary" />,
-      desc: "As one of Kawardha's largest wholesale drug distributors, we supply clinical consumables, surgical items, IV fluids, and general formulations to over 400+ doctors across Kabirdham district. Partner with us for reliable bulk logistics.",
+      title: "Wholesale Medicine Supply for Doctors & Clinics",
+      subtitle: "Dedicated wholesale rates for medical practitioners, clinics, and hospitals in Kawardha.",
+      icon: <Building2 className="w-10 h-10 text-brand-primary" aria-hidden="true" />,
+      desc: "As one of Kawardha's largest wholesale medicine suppliers, Sharda Medical Store provides clinical consumables, surgical items, IV fluids, and branded formulations to over 400+ doctors across Kabirdham district. Partner with us for reliable bulk logistics.",
       features: [
         "Specialized wholesale rates on bulk pharmaceutical purchases",
         "Wide inventory matching clinical and hospital standards",
         "Fully computerized GST billing and accounting records",
-        "Priority distribution and delivery to clinics"
+        "Priority distribution and scheduled bulk delivery to clinics"
       ],
       howItWorks: [
         "Provide your Drug License (DL) or clinic registration copy.",
-        "Submit your requirement sheet or monthly inventory list.",
+        "Submit your monthly requirement sheet or inventory list.",
         "Get an itemized commercial wholesale price quote within hours.",
-        "Schedule regular bulk deliveries with customized invoices."
+        "Schedule regular bulk deliveries with customized GST invoices."
       ],
-      whatsappPrefill: "Hello, I am a doctor/clinic owner and want to inquire about wholesale medicine rates for my clinic. Details:",
-      ctaText: "Inquire Wholesale Rates"
+      whatsappPrefill: "Hello, I am a doctor/clinic owner in Kawardha and want to inquire about wholesale medicine rates for my clinic. Details:",
+      ctaText: "Inquire Wholesale Medicine Rates"
     },
     {
       id: "equipment",
       title: "Medical Equipment & Surgical Supplies",
-      subtitle: "Bandages of all types and medical check devices for patients and doctors.",
-      icon: <Stethoscope className="w-10 h-10 text-brand-primary" />,
-      desc: "We supply essential orthopedic supports and patient monitoring devices. From basic crepe bandages for sprains to electronic blood pressure checkers and nebulizers, we stock top-grade brands with warranties.",
+      subtitle: "Bandages of all types and patient monitoring devices in Kawardha.",
+      icon: <Stethoscope className="w-10 h-10 text-brand-primary" aria-hidden="true" />,
+      desc: "We supply essential orthopedic supports and patient monitoring devices. From basic crepe bandages for sprains to electronic blood pressure monitors and nebulizers, Sharda Medical Store stocks top-grade brands with manufacturer warranties.",
       features: [
         "Surgical dressings, cotton rolls, and elastic adhesive bandages",
-        "Electronic monitoring devices (BP cuff, pulse oximeters, glucometers)",
-        "Orthopedic support braces, kneecaps, and belts",
-        "Steam vaporizers and breathing nebulizers"
+        "Electronic monitoring devices (BP monitors, pulse oximeters, glucometers)",
+        "Orthopedic support braces, kneecaps, and lumbar belts",
+        "Steam vaporizers and breathing nebulizers for home and clinic"
       ],
       howItWorks: [
-        "Browse our equipment list or let us know the device you need.",
-        "Select the brand (Omron, Dr. Trust, Hicks, etc.) and size.",
-        "We verify compatibility or provide instructions on device usage.",
-        "Available for immediate dispatch or store pickup."
+        "Browse our equipment catalog or let us know the device you need.",
+        "Select the brand (Omron, Dr. Trust, Hicks, etc.) and required size.",
+        "Our team provides guidance on proper operation and warranty registration.",
+        "Available for immediate counter pickup in Naveen Bazar or home delivery."
       ],
-      whatsappPrefill: "I want to inquire about medical equipment / bandages. Item details:",
+      whatsappPrefill: "I want to inquire about medical equipment / surgical supplies in Kawardha. Item details:",
       ctaText: "Inquire Medical Equipment"
     }
   ];
@@ -104,13 +105,13 @@ export default function Services() {
       {/* 1. HEADER HERO */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
         <span className="text-xs font-bold text-brand-primary uppercase tracking-widest px-3 py-1 bg-brand-lightest rounded-full">
-          Comprehensive Care
+          Comprehensive Pharmacy Services
         </span>
-        <h1 className="text-4xl md:text-5xl font-black text-brand-dark tracking-tight">
-          What We Do For <span className="text-gradient">Your Health.</span>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-dark tracking-tight">
+          Healthcare Services by <span className="text-gradient">Sharda Medical Store in Kawardha</span>
         </h1>
         <p className="text-slate-600 max-w-2xl mx-auto text-base leading-relaxed">
-          From medicine home delivery to rare drug sourcing and clinical supplies, we serve both patients and healthcare providers.
+          From doorstep <strong>medicine home delivery in Kawardha</strong> to rare drug sourcing and wholesale supply for <strong>400+ doctors</strong>, we serve patients, families, and healthcare clinics across Kabirdham district.
         </p>
       </section>
 
@@ -131,7 +132,7 @@ export default function Services() {
                     {service.icon}
                   </div>
                   <div>
-                    <h2 className="text-2xl font-extrabold text-slate-800">{service.title}</h2>
+                    <h2 className="text-xl md:text-2xl font-extrabold text-slate-800">{service.title}</h2>
                     <p className="text-xs text-brand-primary font-bold">{service.subtitle}</p>
                   </div>
                 </div>
@@ -142,11 +143,11 @@ export default function Services() {
 
                 {/* Bullet features */}
                 <div className="space-y-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Key Highlights</h4>
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block">Key Service Highlights</span>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-medium text-slate-700">
                     {service.features.map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start space-x-2">
-                        <CheckCircle2 className="w-4 h-4 text-brand-accent mt-0.5 shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-brand-accent mt-0.5 shrink-0" aria-hidden="true" />
                         <span>{feat}</span>
                       </li>
                     ))}
@@ -156,16 +157,18 @@ export default function Services() {
                 <div className="flex flex-col sm:flex-row gap-3 pt-2">
                   <button
                     onClick={() => openOrderModal(service.whatsappPrefill)}
+                    aria-label={`${service.ctaText} from Sharda Medical Store Kawardha`}
                     className="flex items-center justify-center space-x-2 px-6 py-3.5 bg-brand-primary hover:bg-brand-dark text-white font-bold rounded-xl shadow-md transition-all cursor-pointer text-sm"
                   >
-                    <MessageSquare className="w-4.5 h-4.5 fill-white" />
+                    <MessageSquare className="w-4.5 h-4.5 fill-white" aria-hidden="true" />
                     <span>{service.ctaText}</span>
                   </button>
                   <a
                     href={`tel:${storeInfo.phone.replace(/\s+/g, '')}`}
+                    aria-label={`Call Sharda Medical Store Kawardha regarding ${service.title}`}
                     className="flex items-center justify-center space-x-2 px-6 py-3.5 bg-slate-50 border border-slate-200 text-slate-800 font-bold rounded-xl text-sm"
                   >
-                    <Phone className="w-4.5 h-4.5 text-brand-primary" />
+                    <Phone className="w-4.5 h-4.5 text-brand-primary" aria-hidden="true" />
                     <span>Call Store</span>
                   </a>
                 </div>
@@ -196,20 +199,29 @@ export default function Services() {
       {/* 3. EMERGENCY / SPECIAL CARE FOOTER BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-8 bg-slate-900 rounded-3xl text-white shadow-lg text-center space-y-4">
-          <h3 className="text-xl font-bold">Have an Emergency Prescription?</h3>
+          <h2 className="text-xl md:text-2xl font-bold">Have an Emergency Prescription in Kawardha?</h2>
           <p className="text-slate-400 text-sm max-w-xl mx-auto">
-            We prioritize urgent prescriptions. Call our direct hotline immediately so we can verify stock and coordinate the fastest delivery path.
+            We prioritize urgent prescriptions. Call our direct hotline immediately so we can verify stock at our Naveen Bazar store and coordinate the fastest delivery path.
           </p>
           <div className="pt-2">
             <a
               href={`tel:${storeInfo.phone.replace(/\s+/g, '')}`}
+              aria-label={`Call Sharda Medical Store urgent prescription hotline at ${storeInfo.phone}`}
               className="inline-flex items-center space-x-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl shadow-md transition-all text-sm"
             >
-              <Phone className="w-4.5 h-4.5 fill-white" />
-              <span>Call Direct Hotline</span>
+              <Phone className="w-4.5 h-4.5 fill-white" aria-hidden="true" />
+              <span>Call Direct Hotline: {storeInfo.phone}</span>
             </a>
           </div>
         </div>
+      </section>
+
+      {/* Social Share widget */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+        <SocialShare 
+          title="Healthcare Services by Sharda Medical Store in Kawardha"
+          label="Share our services:"
+        />
       </section>
 
     </div>

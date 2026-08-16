@@ -240,32 +240,36 @@ export const products: Product[] = [
 
 export const faqs: FAQ[] = [
   {
-    question: "How do I place an order for home delivery?",
-    answer: "It is simple! 1. Browse our shop catalog online. 2. Click the 'Order Now' button. 3. Choose 'Order on WhatsApp' or 'Call Us'. 4. Send a text list of your requirements or take a photo of your doctor's prescription and share it. 5. Our certified pharmacist will verify the order, call you to confirm, and dispatch it for delivery."
+    question: "Do you provide medicine home delivery in Kawardha?",
+    answer: "Yes! Sharda Medical Store in Kawardha provides reliable doorstep medicine home delivery across Kawardha town limits. Simply message your prescription or medicine list on WhatsApp (+91 88275 10999) or call our store. Minimum order value is ₹500/- for home delivery."
   },
   {
-    question: "Is there a minimum order amount for home delivery?",
-    answer: "Yes, the minimum order amount for home delivery is ₹500/- and above. Free delivery is provided within Kawardha town limits for orders meeting this minimum threshold."
+    question: "How do I order medicines from Sharda Medical Store?",
+    answer: "Ordering from Sharda Medical Store in Kawardha is simple: 1. Browse our catalog or prepare your medicine list. 2. Tap 'Order on WhatsApp' or call our counter line. 3. Send your medicine list or a clear photo of your doctor's prescription. 4. Our registered pharmacist validates the prescription and dispatches your order securely."
   },
   {
-    question: "Can you source a rare or specialized medicine if it is out of stock?",
-    answer: "Yes, this is one of our special services! We have established networks with regional distributors. If a medicine is not currently on our shelves, we can source it for you within 24 to 48 hours. Just share the exact medicine name and strength on WhatsApp."
+    question: "Do you provide wholesale medicine supply to doctors and clinics in Kawardha?",
+    answer: "Yes, Sharda Medical Store is a trusted wholesale medicine supplier in Kawardha and throughout Kabirdham district. We supply genuine branded pharmaceuticals, surgical consumables, IV sets, and diagnostic devices at dedicated wholesale rates to over 400+ doctors and clinics with computerized GST invoices."
   },
   {
-    question: "Do you supply medicines in wholesale to clinics and doctors?",
-    answer: "Yes, we are one of the leading wholesale pharmaceutical distributors in Kawardha district, trusted by over 400+ doctors. We offer bulk medicines, bandages, surgical items, and diagnostics at dedicated wholesale rates. Doctors and clinic administrators can reach out via call or WhatsApp for a customized quote."
+    question: "Where is Sharda Medical Store located in Kawardha?",
+    answer: "Sharda Medical Store is conveniently located at Naveen Bazar, Main Market Road, Kawardha, Chhattisgarh - 491995. Our central market counter offers walk-in pharmacy consultations, quick OTC dispensing, and order pickups."
   },
   {
-    question: "What are your operating hours? Are you open on weekends?",
-    answer: "We are open 15 hours daily, from 8:00 AM to 11:00 PM, 7 days a week (Monday to Sunday) to ensure you always have access to healthcare. Please note that we are closed on alternate Fridays."
+    question: "Can you source rare or specialty medicines not available in Kawardha?",
+    answer: "Yes, special medicine sourcing is one of our key services. If a rare formulation, oncology drug, or specialized injection is unavailable in the district, we leverage our Raipur and state distributor network to procure it within 24 to 48 hours at standard retail pricing."
   },
   {
-    question: "Do you offer discounts for regular customers?",
-    answer: "Yes, we value our relationship with our regular patients. We offer a flat 10% discount on standard medicines for regular customers and chronic patient orders (e.g., monthly diabetes and blood pressure medication lists)."
+    question: "What are Sharda Medical Store's timings in Kawardha?",
+    answer: "Sharda Medical Store in Kawardha is open 15 hours daily from 8:00 AM to 11:00 PM, 7 days a week (Monday to Sunday). Please note that the counter remains closed on alternate Fridays."
   },
   {
-    question: "Can I return unused medicines?",
-    answer: "Returns are accepted on a condition basis. You can ask at the time of buying or later come within 7 days to get the confirmation. Unopened strips of medicines in their original packaging, with intact batch numbers and expiry dates, can be returned upon validation."
+    question: "Do you offer discounts for regular patients?",
+    answer: "Yes, we support our community with a 10% flat discount on regular medicine orders for chronic care patients managing diabetes, hypertension, cardiac, and thyroid conditions in Kawardha."
+  },
+  {
+    question: "What is the return policy for medicines?",
+    answer: "Returns and exchanges are accepted conditionally within 7 days of purchase. Unopened strips and sealed bottles with intact batch numbers and valid expiry dates can be returned upon validation by our pharmacist."
   }
 ];
 

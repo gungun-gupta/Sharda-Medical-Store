@@ -2,9 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { storeInfo } from '@/data/storeContent';
+import SocialShare from '@/components/SocialShare';
 import { 
-  MapPin, Phone, MessageSquare, Clock, Calendar, 
-  Send, ShieldAlert, CheckCircle2 
+  MapPin, Phone, MessageSquare, Clock, 
+  Send, CheckCircle2 
 } from 'lucide-react';
 
 export default function Contact() {
@@ -50,15 +51,15 @@ export default function Contact() {
     <div className="py-16 space-y-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       {/* Page Title */}
-      <div className="text-center space-y-4 max-w-2xl mx-auto">
+      <div className="text-center space-y-4 max-w-3xl mx-auto">
         <span className="text-xs font-bold text-brand-primary uppercase tracking-widest px-3 py-1 bg-brand-lightest rounded-full">
           Get In Touch
         </span>
-        <h1 className="text-4xl font-black text-brand-dark tracking-tight">
-          Contact Sharda Medical Store
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-dark tracking-tight">
+          Contact <span className="text-gradient">Sharda Medical Store in Kawardha</span>
         </h1>
-        <p className="text-slate-600 text-sm">
-          Have an order, inquiry about medicine sourcing, or clinical wholesale account? Reach out using the channels below. All store operations and contact lines are managed under the authority of <strong>Mr. Ashutosh Gupta</strong>.
+        <p className="text-slate-600 text-sm leading-relaxed">
+          Have an order for <strong>medicine home delivery in Kawardha</strong>, an inquiry about specialty medicine sourcing, or require a <strong>wholesale pharmaceutical account for doctors</strong>? Reach out directly using our Naveen Bazar pharmacy channels below. Store operations and counter inquiries are managed under the authority of <strong>Mr. Ashutosh Gupta</strong>.
         </p>
       </div>
 
@@ -69,62 +70,67 @@ export default function Contact() {
         <div className="lg:col-span-6 space-y-8 flex flex-col justify-between">
           
           {/* Details Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            
-            {/* Address */}
-            <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2">
-              <MapPin className="w-5 h-5 text-brand-primary" />
-              <h3 className="font-extrabold text-slate-800 text-sm">Our Location</h3>
-              <p className="text-slate-500 text-xs leading-relaxed">
-                {storeInfo.location.address}, <br />
-                Near Main Chowk, {storeInfo.location.city}, <br />
-                Chhattisgarh - 491995
-              </p>
-            </div>
+          <div className="space-y-4">
+            <h2 className="text-xl font-bold text-slate-800">Store Contact &amp; Location Details</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              {/* Address */}
+              <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2">
+                <MapPin className="w-5 h-5 text-brand-primary" aria-hidden="true" />
+                <h3 className="font-extrabold text-slate-800 text-sm">Store Address</h3>
+                <p className="text-slate-500 text-xs leading-relaxed">
+                  {storeInfo.location.address}, <br />
+                  Near Main Chowk, {storeInfo.location.city}, <br />
+                  Chhattisgarh - 491995
+                </p>
+              </div>
 
-            {/* Timings */}
-            <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2">
-              <Clock className="w-5 h-5 text-brand-primary" />
-              <h3 className="font-extrabold text-slate-800 text-sm">Pharmacy Hours</h3>
-              <p className="text-slate-500 text-xs leading-relaxed">
-                <strong>{storeInfo.hours}</strong> <br />
-                Open 7 Days a week <br />
-                <span className="text-amber-600 font-medium">({storeInfo.hoursFootnote})</span>
-              </p>
-            </div>
+              {/* Timings */}
+              <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2">
+                <Clock className="w-5 h-5 text-brand-primary" aria-hidden="true" />
+                <h3 className="font-extrabold text-slate-800 text-sm">Pharmacy Hours</h3>
+                <p className="text-slate-500 text-xs leading-relaxed">
+                  <strong>{storeInfo.hours}</strong> <br />
+                  Open 7 Days a week <br />
+                  <span className="text-amber-600 font-medium text-[11px]">({storeInfo.hoursFootnote})</span>
+                </p>
+              </div>
 
-            {/* WhatsApp */}
-            <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2">
-              <MessageSquare className="w-5 h-5 text-whatsapp" />
-              <h3 className="font-extrabold text-slate-800 text-sm">WhatsApp Chat</h3>
-              <p className="text-slate-500 text-xs leading-relaxed mb-2">
-                Order medicines, upload prescriptions, or check availability instantly.
-              </p>
-              <a 
-                href={`https://wa.me/${storeInfo.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold text-whatsapp hover:underline"
-              >
-                Chat on WhatsApp &rarr;
-              </a>
-            </div>
+              {/* WhatsApp */}
+              <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2">
+                <MessageSquare className="w-5 h-5 text-whatsapp" aria-hidden="true" />
+                <h3 className="font-extrabold text-slate-800 text-sm">WhatsApp Ordering</h3>
+                <p className="text-slate-500 text-xs leading-relaxed mb-2">
+                  Order medicines, upload prescriptions, or check availability instantly.
+                </p>
+                <a 
+                  href={`https://wa.me/${storeInfo.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat with Sharda Medical Store on WhatsApp"
+                  className="text-xs font-bold text-whatsapp hover:underline inline-flex items-center space-x-1"
+                >
+                  <span>Chat on WhatsApp (+91 {storeInfo.whatsapp.replace('91', '')}) &rarr;</span>
+                </a>
+              </div>
 
-            {/* Direct Phone */}
-            <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2 border-l-4 border-l-brand-primary">
-              <Phone className="w-5 h-5 text-brand-primary" />
-              <h3 className="font-extrabold text-slate-800 text-sm">Phone Counter</h3>
-              <p className="text-slate-500 text-xs leading-relaxed mb-2">
-                Speak directly with <strong>Mr. Ashutosh Gupta</strong> (Managing Authority) on his direct line to confirm orders.
-              </p>
-              <a 
-                href={`tel:${storeInfo.phone.replace(/\s+/g, '')}`}
-                className="text-xs font-bold text-brand-primary hover:underline"
-              >
-                Call Mr. Ashutosh Gupta &rarr;
-              </a>
-            </div>
+              {/* Direct Phone */}
+              <div className="p-5 bg-white border border-slate-100 rounded-2xl space-y-2 border-l-4 border-l-brand-primary">
+                <Phone className="w-5 h-5 text-brand-primary" aria-hidden="true" />
+                <h3 className="font-extrabold text-slate-800 text-sm">Direct Phone Line</h3>
+                <p className="text-slate-500 text-xs leading-relaxed mb-2">
+                  Speak directly with <strong>Mr. Ashutosh Gupta</strong> (Managing Authority) to place or confirm orders.
+                </p>
+                <a 
+                  href={`tel:${storeInfo.phone.replace(/\s+/g, '')}`}
+                  aria-label={`Call Mr. Ashutosh Gupta at Sharda Medical Store on ${storeInfo.phone}`}
+                  className="text-xs font-bold text-brand-primary hover:underline"
+                >
+                  Call: {storeInfo.phone} &rarr;
+                </a>
+              </div>
 
+            </div>
           </div>
 
           {/* Contact Form */}
@@ -132,7 +138,7 @@ export default function Contact() {
             <div className="space-y-1">
               <h2 className="text-lg font-bold text-slate-800">Send an Online Inquiry</h2>
               <p className="text-slate-400 text-xs">
-                Submit this form to open WhatsApp with your pre-formatted query.
+                Submit this form to open WhatsApp with your pre-formatted medicine order or question.
               </p>
             </div>
 
@@ -181,16 +187,17 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={submitted}
+                aria-label="Submit inquiry to Sharda Medical Store on WhatsApp"
                 className="w-full flex items-center justify-center space-x-2 p-3.5 bg-brand-primary hover:bg-brand-dark text-white font-bold rounded-xl text-xs shadow-md transition-all cursor-pointer"
               >
                 {submitted ? (
                   <>
-                    <CheckCircle2 className="w-4 h-4" />
+                    <CheckCircle2 className="w-4 h-4" aria-hidden="true" />
                     <span>Opening WhatsApp Chat...</span>
                   </>
                 ) : (
                   <>
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4" aria-hidden="true" />
                     <span>Open in WhatsApp</span>
                   </>
                 )}
@@ -210,7 +217,7 @@ export default function Contact() {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Sharda Medical Store Google Maps Location"
+              title="Sharda Medical Store Naveen Bazar Kawardha Google Maps Location"
             />
           ) : (
             <div className="w-full h-full min-h-[450px] bg-slate-50 flex items-center justify-center">
@@ -219,6 +226,14 @@ export default function Contact() {
           )}
         </div>
 
+      </div>
+
+      {/* Social Share */}
+      <div className="flex justify-center pt-4">
+        <SocialShare 
+          title="Contact Sharda Medical Store in Kawardha — Phone, WhatsApp & Address"
+          label="Share store contact details:"
+        />
       </div>
 
     </div>

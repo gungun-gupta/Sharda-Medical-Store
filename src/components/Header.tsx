@@ -27,9 +27,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          <Link 
+            href="/" 
+            aria-label="Sharda Medical Store Kawardha — Home"
+            className="flex items-center space-x-2 group"
+          >
             <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-primary text-white shadow-md group-hover:scale-105 transition-transform duration-200">
-              <Plus className="w-6 h-6 stroke-[3]" />
+              <Plus className="w-6 h-6 stroke-[3]" aria-hidden="true" />
             </div>
             <div>
               <span className="block text-lg font-bold text-brand-dark tracking-tight leading-none group-hover:text-brand-primary transition-colors">
@@ -42,7 +46,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Main Navigation">
             {navLinks.map((link) => {
               const isActive = pathname === link.path;
               return (
@@ -65,16 +69,18 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-3">
             <a
               href={`tel:${storeInfo.phone.replace(/\s+/g, '')}`}
+              aria-label={`Call Sharda Medical Store at ${storeInfo.phone}`}
               className="flex items-center space-x-1.5 px-3.5 py-2 text-xs font-bold text-brand-dark hover:text-brand-primary transition-colors border border-slate-200 rounded-lg bg-white"
             >
-              <Phone className="w-3.5 h-3.5" />
+              <Phone className="w-3.5 h-3.5 text-brand-primary" aria-hidden="true" />
               <span>Call Store</span>
             </a>
             <button
               onClick={() => openOrderModal()}
+              aria-label="Order medicines on WhatsApp from Sharda Medical Store"
               className="flex items-center space-x-1.5 px-4.5 py-2 text-xs font-bold text-white bg-brand-primary hover:bg-brand-dark rounded-lg shadow-sm hover:shadow-md transition-all cursor-pointer"
             >
-              <MessageSquare className="w-3.5 h-3.5" />
+              <MessageSquare className="w-3.5 h-3.5 fill-white" aria-hidden="true" />
               <span>Order Now</span>
             </button>
           </div>
@@ -84,7 +90,8 @@ export default function Header() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-lg text-slate-500 hover:text-brand-primary hover:bg-slate-100 outline-none transition-colors"
-              aria-label="Toggle main menu"
+              aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -141,9 +148,10 @@ export default function Header() {
             
             <a
               href={`tel:${storeInfo.phone.replace(/\s+/g, '')}`}
+              aria-label={`Call Sharda Medical Store at ${storeInfo.phone}`}
               className="flex items-center justify-center space-x-2 w-full p-3.5 bg-slate-50 border border-slate-200 text-slate-800 font-bold rounded-xl text-center"
             >
-              <Phone className="w-4 h-4 text-brand-primary" />
+              <Phone className="w-4 h-4 text-brand-primary" aria-hidden="true" />
               <span>Call Us</span>
             </a>
             
@@ -152,9 +160,10 @@ export default function Header() {
                 setMobileMenuOpen(false);
                 openOrderModal();
               }}
+              aria-label="Order medicines on WhatsApp"
               className="flex items-center justify-center space-x-2 w-full p-3.5 bg-brand-primary hover:bg-brand-dark text-white font-bold rounded-xl text-center shadow-md cursor-pointer"
             >
-              <MessageSquare className="w-4 h-4" />
+              <MessageSquare className="w-4 h-4 fill-white" aria-hidden="true" />
               <span>Order Now</span>
             </button>
           </div>

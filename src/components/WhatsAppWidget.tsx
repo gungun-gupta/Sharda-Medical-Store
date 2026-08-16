@@ -22,7 +22,7 @@ export default function WhatsAppWidget() {
         target="_blank"
         rel="noopener noreferrer"
         className="relative flex items-center justify-center w-14 h-14 rounded-full bg-whatsapp hover:bg-whatsapp-dark shadow-xl hover:shadow-2xl transition-all duration-200 hover:scale-105 active:scale-95 group"
-        aria-label="Order on WhatsApp"
+        aria-label="Chat on WhatsApp with Sharda Medical Store Kawardha"
       >
         {/* Pulse rings for call-to-action animation */}
         <span className="absolute -inset-0.5 rounded-full bg-whatsapp/40 animate-ping opacity-75" />
