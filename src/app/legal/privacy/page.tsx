@@ -1,5 +1,20 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import { storeInfo } from '@/data/storeContent';
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Privacy Policy of Sharda Medical Store Kawardha. Learn how we handle customer prescription data, order details, and personal health information securely.",
+  alternates: {
+    canonical: "https://sharda-medical-store.vercel.app/legal/privacy",
+  },
+  openGraph: {
+    title: "Privacy Policy | Sharda Medical Store Kawardha",
+    description: "Privacy Policy of Sharda Medical Store Kawardha. Learn how we handle customer prescription data, order details, and personal health information securely.",
+    url: "https://sharda-medical-store.vercel.app/legal/privacy",
+    type: "website",
+  },
+};
 
 export default function PrivacyPolicy() {
   return (

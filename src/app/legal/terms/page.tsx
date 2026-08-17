@@ -1,5 +1,20 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import { storeInfo } from '@/data/storeContent';
+
+export const metadata: Metadata = {
+  title: "Terms of Service",
+  description: "Terms of Service and ordering guidelines for Sharda Medical Store Kawardha. Information regarding prescription verification, delivery, and pricing.",
+  alternates: {
+    canonical: "https://sharda-medical-store.vercel.app/legal/terms",
+  },
+  openGraph: {
+    title: "Terms of Service | Sharda Medical Store Kawardha",
+    description: "Terms of Service and ordering guidelines for Sharda Medical Store Kawardha. Information regarding prescription verification, delivery, and pricing.",
+    url: "https://sharda-medical-store.vercel.app/legal/terms",
+    type: "website",
+  },
+};
 
 export default function TermsOfService() {
   return (

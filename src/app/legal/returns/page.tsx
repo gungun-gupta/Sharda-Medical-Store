@@ -1,5 +1,20 @@
+import type { Metadata } from 'next';
 import React from 'react';
 import { storeInfo } from '@/data/storeContent';
+
+export const metadata: Metadata = {
+  title: "Return Policy",
+  description: "Return Policy of Sharda Medical Store Kawardha. Clear details on return windows, cold-chain medicine exclusions, and refund procedures.",
+  alternates: {
+    canonical: "https://sharda-medical-store.vercel.app/legal/returns",
+  },
+  openGraph: {
+    title: "Return Policy | Sharda Medical Store Kawardha",
+    description: "Return Policy of Sharda Medical Store Kawardha. Clear details on return windows, cold-chain medicine exclusions, and refund procedures.",
+    url: "https://sharda-medical-store.vercel.app/legal/returns",
+    type: "website",
+  },
+};
 
 export default function ReturnPolicy() {
   return (

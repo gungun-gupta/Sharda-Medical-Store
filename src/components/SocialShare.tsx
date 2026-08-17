@@ -12,7 +12,7 @@ interface SocialShareProps {
 
 export default function SocialShare({
   title = "Sharda Medical Store — Trusted Medical Store in Kawardha",
-  url = "https://shardamedicalstore.com",
+  url = "https://sharda-medical-store.vercel.app",
   label = "Share this page:",
   className = "",
 }: SocialShareProps) {
