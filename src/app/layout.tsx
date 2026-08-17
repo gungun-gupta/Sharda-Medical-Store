@@ -79,6 +79,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "WiR_hEvE8u6Caf1i5zZNaug48huxb3sOk3YzzR3qVVA",
+  },
   alternates: {
     canonical: `${siteUrl}/`,
   },
@@ -160,6 +163,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} font-sans scroll-smooth`}>
       <head>
+        <meta name="google-site-verification" content="WiR_hEvE8u6Caf1i5zZNaug48huxb3sOk3YzzR3qVVA" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <script
           type="application/ld+json"
