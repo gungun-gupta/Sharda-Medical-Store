@@ -60,7 +60,7 @@ export const storeInfo: StoreInfo = {
     googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14828.679634991196!2d81.24278453775084!3d22.01428258661645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a296541f5a5ad27%3A0xb5b736b04eb8c74a!2sKawardha%2C%20Chhattisgarh%20491995!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
   },
   phone: "+91 99936 50999",
-  whatsapp: "918827510999", // Needs to be format without + or spaces for api.whatsapp.com/wa.me link
+  whatsapp: "919425558999", // Needs to be format without + or spaces for api.whatsapp.com/wa.me link
   hours: "8:00 AM – 11:00 PM",
   hoursFootnote: "Open 15 Hours Daily, 7 Days a week (Closed on alternate Fridays)",
   establishedYear: "2000",
@@ -241,7 +241,7 @@ export const products: Product[] = [
 export const faqs: FAQ[] = [
   {
     question: "Do you provide medicine home delivery in Kawardha?",
-    answer: "Yes! Sharda Medical Store in Kawardha provides reliable doorstep medicine home delivery across Kawardha town limits. Simply message your prescription or medicine list on WhatsApp (+91 88275 10999) or call our store. Minimum order value is ₹500/- for home delivery."
+    answer: "Yes! Sharda Medical Store in Kawardha provides reliable doorstep medicine home delivery across Kawardha town limits. Simply message your prescription or medicine list on WhatsApp (+91 94255 58999) or call our store. Minimum order value is ₹500/- for home delivery."
   },
   {
     question: "How do I order medicines from Sharda Medical Store?",

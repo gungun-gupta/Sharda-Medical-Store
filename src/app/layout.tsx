@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "Sharda Medical Store | Trusted Medical Store in Kawardha",
     template: "%s | Sharda Medical Store Kawardha",
   },
-  description: "Sharda Medical Store in Kawardha offers 26+ years of trusted pharmacy care, doorstep medicine home delivery, major brands, and wholesale supply for 400+ doctors.",
+  description: "Sharda Medical Store in Kawardha — trusted pharmacy and medical store.",
   keywords: [
     "Sharda Medical Store in Kawardha",
     "medical store Kawardha",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Sharda Medical Store | Trusted Medical Store in Kawardha",
-    description: "Sharda Medical Store in Kawardha offers 26+ years of trusted pharmacy care, doorstep medicine home delivery, major brands, and wholesale supply for 400+ doctors.",
+    description: "Sharda Medical Store in Kawardha — trusted pharmacy and medical store.",
     url: siteUrl,
     type: "website",
     locale: "en_IN",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "Sharda Medical Store | Trusted Medical Store in Kawardha",
-    description: "Sharda Medical Store in Kawardha offers 26+ years of trusted pharmacy care, doorstep medicine home delivery, major brands, and wholesale supply for 400+ doctors.",
+    description: "Sharda Medical Store in Kawardha — trusted pharmacy and medical store.",
     images: ["/apple-touch-icon.png"],
   },
   robots: {
@@ -95,39 +95,22 @@ export default function RootLayout({
   const gaMeasurementId = process.env.NEXT_PUBLIC_GA_ID || "G-5P8XW66V8N";
 
   // Pharmacy/LocalBusiness structured data
-  const jsonLd = {
+  const pharmacyJsonLd = {
     "@context": "https://schema.org",
     "@type": "Pharmacy",
     "name": "Sharda Medical Store",
-    "alternateName": [
-      "Sharda Medical Store in Kawardha",
-      "Sharda Medical Store Kawardha",
-      "Sharda Medicals"
-    ],
-    "description": "Sharda Medical Store in Kawardha offers 26+ years of trusted pharmacy care, doorstep medicine home delivery, major brands, and wholesale pharmaceutical supply in Naveen Bazar.",
-    "telephone": storeInfo.phone,
-    "url": siteUrl,
+    "alternateName": "Sharda Medical Store Kawardha",
+    "url": "https://sharda-medical-store.vercel.app/",
+    "telephone": "+91-9993650999",
     "logo": `${siteUrl}/apple-touch-icon.png`,
     "image": `${siteUrl}/apple-touch-icon.png`,
     "priceRange": "₹₹",
     "currenciesAccepted": "INR",
     "paymentAccepted": "Cash, UPI, Credit Card, Debit Card",
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Kawardha"
-      },
-      {
-        "@type": "AdministrativeArea",
-        "name": "Kabirdham"
-      }
-    ],
-    "hasMap": storeInfo.location.googleMapsLink,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": storeInfo.location.address,
-      "addressLocality": storeInfo.location.city,
-      "addressRegion": storeInfo.location.state,
+      "streetAddress": "Naveen Bazar Main Market Road, Near Eos Kawardha",
+      "addressLocality": "Kawardha",
       "postalCode": "491995",
       "addressCountry": "IN"
     },
@@ -160,6 +143,18 @@ export default function RootLayout({
     ]
   };
 
+  // WebSite structured data
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Sharda Medical Store",
+    "alternateName": [
+      "Sharda Medical Store Kawardha",
+      "sharda-medical-store.vercel.app"
+    ],
+    "url": "https://sharda-medical-store.vercel.app/"
+  };
+
   return (
     <html lang="en" className={`${inter.variable} font-sans scroll-smooth`}>
       <head>
@@ -167,7 +162,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(pharmacyJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body className="flex flex-col min-h-screen bg-background text-foreground antialiased selection:bg-brand-lightest selection:text-brand-dark">
